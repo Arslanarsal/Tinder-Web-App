@@ -1,40 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="src/output.css" />
-    <title>Tinder</title>
-  </head>
-  <body>
-    <div class="w-full h-screen bg-black">
-      <div class="imageconatiner w-full h-screen relative">
-        <div
-          class="maincard z-[3] w-full absolute h-screen bg-orange-600"
-        >
-        <img class="w-full h-screen object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      </div>
-        <div
-          class="incomingcard z-[2] absolute w-full h-screen bg-green-600"
-        ></div>
-      </div>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="src/output.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Tinder</title>
+
+  <style>
+    .detailconainer {
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0, 483));
+    }
+  </style>
+</head>
+
+<body>
+  <div class="w-full h-screen bg-black">
+    <!-- Background images -->
+    <div class="imageconatiner w-full h-screen relative">
+
+      <!-- Main front image -->
+      <div class="maincard z-[3] w-full absolute h-screen bg-orange-600">
+        <img class="w-full h-screen object-cover"
+          src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+      </div>
+      <!-- Upcomming image -->
+      <div class="incomingcard z-[2] absolute w-full h-screen bg-green-600"></div>
+    </div>
+
+    <!-- Navbar and details -->
+    <div class="absolute w-full flex flex-col justify-between h-screen top-0 z-[4] px-5 py-6">
       <!-- navbar -->
-      <div class="absolute w-full h-screen top-0 z-[4] px-5 py-6">
-        <div class="navbar flex justify-between items-center text-white">
-          <div class="profileimg w-[3.5rem] h-[3.5rem] rounded-full bg-red-600 overflow-hidden">
-            <img class=" object-cover"
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-          </div>
-          <h3 class="text-xl font-medium tracking-tighter">They liked you</h3>
+      <div class="navbar flex justify-between items-center text-white">
+        <!-- first in navbar -->
+        <div class="profileimg w-[3.5rem] h-[3.5rem] rounded-full bg-red-600 overflow-hidden">
+          <img class=" object-cover"
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" />
+        </div>
+        <!-- Text in navbar -->
+        <h3 class="text-xl font-medium tracking-tighter">They liked you</h3>
+        <!-- last chat icon in navbar -->
+        <div class=" relative flex justify-center items-center chaticon rounded-full w-[3.5rem] h-[3.5rem] bg-white/20">
+          <!-- Badge show number -->
           <div
-            class="chaticon rounded-full w-[3.5rem] h-[3.5rem] bg-white/50"
-          ></div>
+            class="badge w-5 h-5 bg-[#FC5149] absolute top-0 right-0 -translate-x-[.2rem] -translate-y-[.3rem] flex justify-center items-center rounded-full">
+            <h2>5</h2>
+          </div>
+
+          <!-- Chat icon -->
+          <span class=" text-[1.4rem] opacity-80 material-symbols-outlined">
+            chat
+          </span>
         </div>
       </div>
+
+      <!-- Details -->
+      <div class="detailconainer">
+        <div class="details">
+          <!-- Location -->
+          <div class="location flex items-center ">
+            <!-- Arrow -->
+            <div class=" w-6 h-6 bg-white rounded-full flex items-center justify-center">
+              <span class=" font-bold text-[1rem] material-symbols-outlined">
+                subdirectory_arrow_right
+              </span>
+            </div>
+            <!-- Location name -->
+            <p class="font-bold text-sm text-white ml-3">USA, Calfonia</p>
+
+          </div>
+
+          <!-- Name -->
+          <div class="name flex items-center text-white text-[3rem]">
+            <h1 class="pr-4">Victoria</h1>
+            <h1 class="text-white/50">20</h1>
+          </div>
+
+          <!-- Music -->
+          <div class="music text-white flex items-center gap-4">
+            <!-- First -->
+            <div class="first flex items-center justify-center gap-1 bg-white/40 w-[4.5rem] rounded-lg">
+              <span class=" text-[1rem] material-symbols-outlined">
+                music_note
+              </span>
+              <p class="text-sm">Music</p>
+            </div>
+            <!-- Second -->
+            <div class="second flex items-center justify-center gap-1 bg-white/40 w-[4.5rem] rounded-lg">
+              <span class=" text-[1rem] material-symbols-outlined">
+                music_note
+              </span>
+              <p class="text-sm">Music</p>
+            </div>
+            <!-- Third -->
+            <div class="third flex items-center justify-center gap-1 bg-white/40 w-[4.5rem] rounded-lg">
+              <span class=" text-[1rem] material-symbols-outlined">
+                music_note
+              </span>
+              <p class="text-sm">Music</p>
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <div class="bio text-white/70">
+            <h1 class=" mt-3 mb-1">Bio</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla est iusto delectus voluptate odit
+              voluptatibus at voluptatum.</p>
+          </div>
+
+          <!-- Button -->
+          <div class="button mt-4 flex justify-center items-center gap-2 px-4 text-white">
+            <button class="w-1/2 text-black h-10 bg-white rounded-lg"><span
+                class=" font-bold material-symbols-outlined">
+                close
+              </span></button>
+            <button class="w-1/2 h-10 bg-[#FC5149] rounded-lg"><span class="material-symbols-outlined">
+                favorite
+              </span></button>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+
+
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
